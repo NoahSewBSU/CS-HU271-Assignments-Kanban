@@ -1,7 +1,5 @@
 # CS-HU 271 Kanban (Extra Credit)
 
-# Testing Commit
-
 ## Step 1 - Create a New Repository
 Using your personal GitHub account [create new a private GitHub repository](https://github.com/new) called `CS-HU271-Assignments-Kanban`.
 
