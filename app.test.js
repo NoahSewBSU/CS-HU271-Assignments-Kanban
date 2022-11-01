@@ -2,6 +2,16 @@ const supertest = require('supertest') // supertest is a framework that allows t
 const app = require('./app')
 const request = supertest(app)
 
+test('GET the root route and expects the body of the response to contain "Who you calling pin-head?"', async () => {
+    const response = await request.get('/dirtydan')
+
+    expect(response.text).toContain("Who you calling pin-head?")
+});
+
+test('GET the root route and expects the 200 (ok) status code', async () => {
+    await request.get('/dirtydan').expect(200);
+});
+
 test('GET the root route and expects the 200 (ok) status code', async () => {
     await request.get('/').expect(200);
 });

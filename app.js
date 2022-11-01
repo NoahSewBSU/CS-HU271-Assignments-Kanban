@@ -2,13 +2,18 @@ const express = require("express")
 const app = express()
 
 const { sum } = require('./operations.js')
-//TODO: uncomment the next line
-// const { subtract } = require('./operations.js')
+
+const { subtract } = require('./operations.js')
 
 // go to http://localhost:3000/ to see this message
 app.get('/', (req, res) => {
     res.send('Hello world!')
 });
+
+// go to http://localhost:3000/dirtydan to see this message
+app.get('/dirtydan', (req, res) => {
+    res.send('Who you calling pin-head?')
+})
 
 // go to http://localhost:3000/about to see this message
 app.get('/about', (req, res) => {
@@ -48,5 +53,7 @@ app.get('/api/operations/sum/:first_value/:second_value', (req, res) => {
     // this is equivalent to
     // res.status(200).send(`${result_of_operation}`);
 });
+
+
 
 module.exports = app
